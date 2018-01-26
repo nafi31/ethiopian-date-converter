@@ -134,7 +134,7 @@ class EthiopianDateConverter(object):
 
     @classmethod
     def to_ethiopian(cls, year, month, date):
-        """ Ethiopian date object representation of provided Gregorian date
+        """ Ethiopian date string representation of provided Gregorian date
 
         Params:
         * year: an int
@@ -221,4 +221,4 @@ class EthiopianDateConverter(object):
         order = [0, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 1, 2, 3, 4]
         ethiopian_month = order[m]
 
-        return datetime.date(ethiopian_year, ethiopian_month, ethiopian_date)
+        return '{}-{}-{}'.format(ethiopian_year, ethiopian_month, ethiopian_date)
