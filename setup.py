@@ -5,7 +5,7 @@
 import setuptools
 
 setuptools.setup(
-    name='ethiopian_date',
+    name='ethiopian-date-converter',
     version=__import__('ethiopian_date').__version__,
     license='GNU General Public License (GPL), Version 3',
 
