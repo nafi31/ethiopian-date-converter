@@ -14,7 +14,7 @@ setuptools.setup(
     description='Ethiopian date converter.',
     long_description=open('README.rst').read(),
 
-    url='http://github.com/rgaudin/tools',
+    url='https://github.com/dimagi/ethiopian-date-converter',
 
     packages=['ethiopian_date'],
 
