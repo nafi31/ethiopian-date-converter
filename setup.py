@@ -2,6 +2,7 @@
 # encoding=utf-8
 # maintainer: rgaudin
 
+from __future__ import absolute_import
 import setuptools
 
 setuptools.setup(
