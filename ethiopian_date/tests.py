@@ -4,7 +4,6 @@
 
 from __future__ import absolute_import
 import unittest
-from datetime import date
 
 from ethiopian_date import EthiopianDateConverter
 
