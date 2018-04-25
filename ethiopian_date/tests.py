@@ -6,7 +6,8 @@ from __future__ import absolute_import
 import unittest
 from datetime import date
 
-from .ethiopian_date import EthiopianDateConverter
+from ethiopian_date import EthiopianDateConverter
+
 
 class TestEthiopianCalendar(unittest.TestCase):      
 
