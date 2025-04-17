@@ -107,7 +107,7 @@ class EthiopianDateConverter:
             until += new_year_day - 1
 
         # if ethiopian year is leap year, paguemain has six days
-        if year - 1 % 4 == 3:
+        if (year - 1) % 4 == 3:
             until += 1
 
         # calculate month and date incremently
