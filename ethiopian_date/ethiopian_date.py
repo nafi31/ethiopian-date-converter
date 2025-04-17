@@ -1,8 +1,8 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # encoding=utf-8
 # maintainer: rgaudin
 
-"""  Ethiopian Calendar tool for Python 2.6
+"""  Ethiopian Calendar tool for Python 3.8+
 
 Copyright (c) 2010 Renaud Gaudin <rgaudin@gmail.com>
 
@@ -22,15 +22,10 @@ You should have received a copy of the GNU General Public License
 along with Foobar; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import unicode_literals
 import datetime
-from six.moves import range
 
 
-class EthiopianDateConverter(object):
-
+class EthiopianDateConverter:
     """ Class methods for converting between Ethiopian and Gregorian """
 
     @classmethod
@@ -94,7 +89,7 @@ class EthiopianDateConverter(object):
         # Number of days in gregorian months
         # starting with September (index 1)
         # Index 0 is reserved for leap years switches.
-        gregorian_months = [0, 30, 31, 30, 31, 31, 28, \
+        gregorian_months = [0, 30, 31, 30, 31, 31, 28,
                             31, 30, 31, 30, 31, 31, 30]
 
         # if next gregorian year is leap year, February has 29 days.
@@ -117,7 +112,7 @@ class EthiopianDateConverter(object):
 
         # calculate month and date incremently
         m = 0
-        for i in range(0, gregorian_months.__len__()):
+        for i in range(len(gregorian_months)):
             if until <= gregorian_months[i]:
                 m = i
                 gregorian_date = until
@@ -157,13 +152,13 @@ class EthiopianDateConverter(object):
         # Number of days in gregorian months
         # starting with January (index 1)
         # Index 0 is reserved for leap years switches.
-        gregorian_months = [0, 31, 28, 31, 30, 31, 30, \
+        gregorian_months = [0, 31, 28, 31, 30, 31, 30,
                             31, 31, 30, 31, 30, 31]
 
         # Number of days in ethiopian months
         # starting with January (index 1)
         # Index 0 is reserved for leap years switches.
-        ethiopian_months = [0, 30, 30, 30, 30, 30, 30, 30, \
+        ethiopian_months = [0, 30, 30, 30, 30, 30, 30, 30,
                             30, 30, 5, 30, 30, 30, 30]
 
         # if gregorian leap year, February has 29 days.
@@ -207,7 +202,7 @@ class EthiopianDateConverter(object):
 
         # calculate month and date incremently
         m = 0
-        for m in range(1, ethiopian_months.__len__()):
+        for m in range(1, len(ethiopian_months)):
             if until <= ethiopian_months[m]:
                 if m == 1 or ethiopian_months[m] == 0:
                     ethiopian_date = until + (30 - tahissas)

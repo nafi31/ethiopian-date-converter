@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # encoding=utf-8
 # maintainer: rgaudin
 
@@ -13,7 +13,4 @@ ethi_date = EthiopianDateConverter.date_to_ethiopian(datetime.date.today())
 
 """
 
-from __future__ import absolute_import
-
-from __future__ import unicode_literals
 from .ethiopian_date import EthiopianDateConverter
