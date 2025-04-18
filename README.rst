@@ -11,7 +11,7 @@ It is a port from Java's Ealet 2.0.
 Installation
 ------------
 
-    pip install ethiopian_date
+    pip install git+https://github.com/nafi31/ethiopian-date-converter.git
 
 Resources
 ---------
